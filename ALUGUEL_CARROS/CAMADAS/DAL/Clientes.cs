@@ -25,6 +25,7 @@ namespace ALUGUEL_CARROS.CAMADAS.DAL
                 SqlDataReader dados = cmd.ExecuteReader(CommandBehavior.CloseConnection);
                 while (dados.Read())
                 {
+
                     MODEL.Clientes cliente = new MODEL.Clientes();
                     cliente.id = Convert.ToInt32(dados["id"].ToString());
                     cliente.nome = dados["nome"].ToString();
@@ -32,8 +33,9 @@ namespace ALUGUEL_CARROS.CAMADAS.DAL
                     cliente.sexo = dados["sexo"].ToString();
 
                     lstClientes.Add(cliente);
+                    
 
-
+                    //opa
                 }
             }
             catch
