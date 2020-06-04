@@ -20,7 +20,82 @@ namespace ALUGUEL_CARROS
         private void Form1_Load(object sender, EventArgs e)
         {
             CAMADAS.DAL.Clientes dalCli = new CAMADAS.DAL.Clientes();
-            dataGridView1.DataSource = dalCli.Select();
+            dtGrvClientes.DataSource = dalCli.Select();
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            //criando objeto cliente
+            CAMADAS.MODEL.Clientes cliente = new CAMADAS.MODEL.Clientes();
+            cliente.nome = txtNome.Text;
+            cliente.cpf = txtCpf.Text;
+            cliente.sexo = txtSexo.Text;
+
+            //criando objeto dalCliente para inserir dados
+            CAMADAS.DAL.Clientes dalCliente = new CAMADAS.DAL.Clientes();
+            dalCliente.Insert(cliente);
+
+            //atualizando dataGridView
+            dtGrvClientes.DataSource = "";
+            dtGrvClientes.DataSource = dalCliente.Select();
+
+            //limpando campos txts
+            txtNome.Clear();
+            txtCpf.Clear();
+            txtSexo.Clear();
+
+        }
+
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            //criando objeto cliente
+            CAMADAS.MODEL.Clientes cliente = new CAMADAS.MODEL.Clientes();
+            cliente.id = Convert.ToInt32(txtId.Text);
+            cliente.nome = txtNome.Text;
+            cliente.cpf = txtCpf.Text;
+            cliente.sexo = txtSexo.Text;
+
+            //criando objeto dalCliente para att dados
+            CAMADAS.DAL.Clientes dalCliente = new CAMADAS.DAL.Clientes();
+            dalCliente.Update(cliente);
+
+            //atualizando dataGridView
+            dtGrvClientes.DataSource = "";
+            dtGrvClientes.DataSource = dalCliente.Select();
+
+            //limpando campos txts
+            txtId.Clear();
+            txtNome.Clear();
+            txtCpf.Clear();
+            txtSexo.Clear();
+        }
+
+        private void btnRemover_Click(object sender, EventArgs e)
+        {
+            //buscando id
+            int idCli = Convert.ToInt32(txtId.Text);
+
+            //criando obj Cliente
+            CAMADAS.DAL.Clientes dalCliente = new CAMADAS.DAL.Clientes();
+            dalCliente.Delete(idCli);
+
+            //carregando dtgrv
+            dtGrvClientes.DataSource = "";
+            dtGrvClientes.DataSource = dalCliente.Select();
+
+            //limpando txtId
+            txtId.Clear();
+
         }
     }
 }

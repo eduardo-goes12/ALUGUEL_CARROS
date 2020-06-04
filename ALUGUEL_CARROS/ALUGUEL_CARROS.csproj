@@ -46,11 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CAMADAS\BLL\teste.cs" />
-    <Compile Include="CAMADAS\BLL\teste2.cs" />
     <Compile Include="CAMADAS\DAL\Clientes.cs" />
     <Compile Include="CAMADAS\DAL\Conexao.cs" />
-    <Compile Include="CAMADAS\DAL\teste.cs" />
     <Compile Include="CAMADAS\MODEL\Aluguel.cs" />
     <Compile Include="CAMADAS\MODEL\Carros.cs" />
     <Compile Include="CAMADAS\MODEL\Clientes.cs" />
@@ -87,6 +84,8 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="CAMADAS\BLL\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
