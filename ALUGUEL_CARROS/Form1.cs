@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -97,5 +98,12 @@ namespace ALUGUEL_CARROS
             txtId.Clear();
 
         }
+
+        private void txtCpf_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+       
     }
 }
