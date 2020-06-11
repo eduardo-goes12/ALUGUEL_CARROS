@@ -1,6 +1,6 @@
 ﻿namespace ALUGUEL_CARROS
 {
-    partial class FrmCarros
+    partial class frmCadastroCarros
     {
         /// <summary>
         /// Required designer variable.
@@ -234,7 +234,7 @@
             this.dataGridView1.Size = new System.Drawing.Size(605, 150);
             this.dataGridView1.TabIndex = 20;
             // 
-            // FrmCarros
+            // frmCadastroCarros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -260,7 +260,7 @@
             this.Controls.Add(this.lblMarca);
             this.Controls.Add(this.lblModelo);
             this.Controls.Add(this.label1);
-            this.Name = "FrmCarros";
+            this.Name = "frmCadastroCarros";
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.FrmCarros_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

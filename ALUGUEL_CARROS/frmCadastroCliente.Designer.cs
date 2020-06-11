@@ -1,6 +1,6 @@
 ﻿namespace ALUGUEL_CARROS
 {
-    partial class Form1
+    partial class frmCadastroCli
     {
         /// <summary>
         /// Variável de designer necessária.
@@ -170,7 +170,7 @@
             this.btnSair.UseVisualStyleBackColor = true;
             this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
-            // Form1
+            // frmCadastroCli
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -192,7 +192,7 @@
             this.KeyPreview = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "Form1";
+            this.Name = "frmCadastroCli";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ALUGUEL_CARROS
 {
-    public partial class FrmCarros : Form
+    public partial class frmCadastroCarros : Form
     {
-        public FrmCarros()
+        public frmCadastroCarros()
         {
             InitializeComponent();
         }
@@ -66,7 +66,7 @@ namespace ALUGUEL_CARROS
         private void btnEditar_Click(object sender, EventArgs e)
         {
             controlesOnOff(true);
-            btnOnOff(true);
+            btnOnOff(false);
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)

@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace ALUGUEL_CARROS
 {
-    public partial class Form1 : Form
+    public partial class frmCadastroCli : Form
     {
-        public Form1()
+        public frmCadastroCli()
         {
             InitializeComponent();
         }

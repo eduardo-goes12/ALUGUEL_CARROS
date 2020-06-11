@@ -19,7 +19,7 @@ namespace ALUGUEL_CARROS
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            new frmCadastroCli().Show();
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -35,6 +35,11 @@ namespace ALUGUEL_CARROS
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            new frmCadastroCarros().Show();
         }
     }
 }
