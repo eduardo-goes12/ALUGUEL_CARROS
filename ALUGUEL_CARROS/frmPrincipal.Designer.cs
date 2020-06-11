@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnCadastrarCarro = new System.Windows.Forms.Button();
+            this.btnCadastarCli = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.button3 = new System.Windows.Forms.Button();
@@ -49,25 +49,25 @@
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // button1
+            // btnCadastrarCarro
             // 
-            this.button1.Location = new System.Drawing.Point(544, 492);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(105, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Cadastrar Carro";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnCadastrarCarro.Location = new System.Drawing.Point(544, 492);
+            this.btnCadastrarCarro.Name = "btnCadastrarCarro";
+            this.btnCadastrarCarro.Size = new System.Drawing.Size(105, 23);
+            this.btnCadastrarCarro.TabIndex = 1;
+            this.btnCadastrarCarro.Text = "Cadastrar Carro";
+            this.btnCadastrarCarro.UseVisualStyleBackColor = true;
+            this.btnCadastrarCarro.Click += new System.EventHandler(this.btnCadastrarCarro_Click);
             // 
-            // button2
+            // btnCadastarCli
             // 
-            this.button2.Location = new System.Drawing.Point(683, 492);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(105, 23);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Cadastrar Cliente";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnCadastarCli.Location = new System.Drawing.Point(683, 492);
+            this.btnCadastarCli.Name = "btnCadastarCli";
+            this.btnCadastarCli.Size = new System.Drawing.Size(105, 23);
+            this.btnCadastarCli.TabIndex = 2;
+            this.btnCadastarCli.Text = "Cadastrar Cliente";
+            this.btnCadastarCli.UseVisualStyleBackColor = true;
+            this.btnCadastarCli.Click += new System.EventHandler(this.btnCadastarCli_Click);
             // 
             // comboBox1
             // 
@@ -133,8 +133,8 @@
             this.Controls.Add(this.button3);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnCadastarCli);
+            this.Controls.Add(this.btnCadastrarCarro);
             this.Controls.Add(this.dataGridView1);
             this.Name = "frmPrincipal";
             this.Text = "frmPrincipal";
@@ -148,8 +148,8 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnCadastrarCarro;
+        private System.Windows.Forms.Button btnCadastarCli;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Button button3;

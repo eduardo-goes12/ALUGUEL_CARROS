@@ -48,8 +48,8 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnGravar = new System.Windows.Forms.Button();
             this.btnVoltar = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.dtGrvCarro = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dtGrvCarro)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -122,7 +122,6 @@
             this.lblId.Name = "lblId";
             this.lblId.Size = new System.Drawing.Size(35, 20);
             this.lblId.TabIndex = 7;
-            this.lblId.Text = "label8";
             this.lblId.Click += new System.EventHandler(this.label8_Click);
             // 
             // txtModelo
@@ -226,20 +225,21 @@
             this.btnVoltar.UseVisualStyleBackColor = true;
             this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
-            // dataGridView1
+            // dtGrvCarro
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(98, 388);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(605, 150);
-            this.dataGridView1.TabIndex = 20;
+            this.dtGrvCarro.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtGrvCarro.Location = new System.Drawing.Point(98, 388);
+            this.dtGrvCarro.Name = "dtGrvCarro";
+            this.dtGrvCarro.Size = new System.Drawing.Size(821, 150);
+            this.dtGrvCarro.TabIndex = 20;
+            this.dtGrvCarro.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtGrvCadastroCarro_CellContentClick);
             // 
             // frmCadastroCarros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 596);
-            this.Controls.Add(this.dataGridView1);
+            this.ClientSize = new System.Drawing.Size(1016, 596);
+            this.Controls.Add(this.dtGrvCarro);
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.btnGravar);
             this.Controls.Add(this.btnCancelar);
@@ -263,7 +263,7 @@
             this.Name = "frmCadastroCarros";
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.FrmCarros_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtGrvCarro)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -291,6 +291,6 @@
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnGravar;
         private System.Windows.Forms.Button btnVoltar;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dtGrvCarro;
     }
 }

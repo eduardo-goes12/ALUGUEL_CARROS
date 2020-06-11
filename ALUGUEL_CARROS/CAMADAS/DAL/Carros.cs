@@ -27,8 +27,8 @@ namespace ALUGUEL_CARROS.CAMADAS.DAL
                 SqlDataReader dados = cmd.ExecuteReader(CommandBehavior.CloseConnection);
                 while (dados.Read())
                 {
-
                     MODEL.Carros carro = new MODEL.Carros();
+
                     carro.id = Convert.ToInt32(dados["id"].ToString());
                     carro.modelo = dados["modelo"].ToString();
                     carro.marca = dados["marca"].ToString();
@@ -51,6 +51,7 @@ namespace ALUGUEL_CARROS.CAMADAS.DAL
             }
             return lstCarros;
         }
+
         //Insert Carros
         public void Insert(MODEL.Carros carro)
         {

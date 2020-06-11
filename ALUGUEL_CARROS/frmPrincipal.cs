@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace ALUGUEL_CARROS
 {
     public partial class frmPrincipal : Form
@@ -17,10 +18,9 @@ namespace ALUGUEL_CARROS
             InitializeComponent();
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            new frmCadastroCli().Show();
-        }
+        
+
+        
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -37,7 +37,15 @@ namespace ALUGUEL_CARROS
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        
+
+        private void btnCadastarCli_Click(object sender, EventArgs e)
+        {
+            new frmCadastroCli().Show();
+
+        }
+
+        private void btnCadastrarCarro_Click(object sender, EventArgs e)
         {
             new frmCadastroCarros().Show();
         }

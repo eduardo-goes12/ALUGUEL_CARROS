@@ -33,7 +33,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtId = new System.Windows.Forms.TextBox();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.txtCpf = new System.Windows.Forms.TextBox();
             this.txtSexo = new System.Windows.Forms.TextBox();
@@ -41,6 +40,9 @@
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnRemover = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
+            this.lblId = new System.Windows.Forms.Label();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnGravar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtGrvClientes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -93,14 +95,6 @@
             this.label4.Text = "sexo";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
-            // txtId
-            // 
-            this.txtId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtId.Location = new System.Drawing.Point(323, 22);
-            this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(45, 26);
-            this.txtId.TabIndex = 5;
-            // 
             // txtNome
             // 
             this.txtNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -140,7 +134,7 @@
             // btnEditar
             // 
             this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditar.Location = new System.Drawing.Point(268, 225);
+            this.btnEditar.Location = new System.Drawing.Point(233, 225);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(97, 34);
             this.btnEditar.TabIndex = 10;
@@ -151,7 +145,7 @@
             // btnRemover
             // 
             this.btnRemover.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRemover.Location = new System.Drawing.Point(434, 225);
+            this.btnRemover.Location = new System.Drawing.Point(346, 225);
             this.btnRemover.Name = "btnRemover";
             this.btnRemover.Size = new System.Drawing.Size(97, 34);
             this.btnRemover.TabIndex = 11;
@@ -162,7 +156,7 @@
             // btnSair
             // 
             this.btnSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSair.Location = new System.Drawing.Point(600, 225);
+            this.btnSair.Location = new System.Drawing.Point(735, 225);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(97, 34);
             this.btnSair.TabIndex = 12;
@@ -170,12 +164,42 @@
             this.btnSair.UseVisualStyleBackColor = true;
             this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
+            // lblId
+            // 
+            this.lblId.Location = new System.Drawing.Point(323, 22);
+            this.lblId.Name = "lblId";
+            this.lblId.Size = new System.Drawing.Size(100, 23);
+            this.lblId.TabIndex = 13;
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Location = new System.Drawing.Point(521, 225);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(75, 23);
+            this.btnCancelar.TabIndex = 14;
+            this.btnCancelar.Text = "&Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // btnGravar
+            // 
+            this.btnGravar.Location = new System.Drawing.Point(617, 225);
+            this.btnGravar.Name = "btnGravar";
+            this.btnGravar.Size = new System.Drawing.Size(75, 23);
+            this.btnGravar.TabIndex = 15;
+            this.btnGravar.Text = "&Gravar";
+            this.btnGravar.UseVisualStyleBackColor = true;
+            this.btnGravar.Click += new System.EventHandler(this.btnGravar_Click);
+            // 
             // frmCadastroCli
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(888, 450);
             this.ControlBox = false;
+            this.Controls.Add(this.btnGravar);
+            this.Controls.Add(this.btnCancelar);
+            this.Controls.Add(this.lblId);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.btnRemover);
             this.Controls.Add(this.btnEditar);
@@ -183,7 +207,6 @@
             this.Controls.Add(this.txtSexo);
             this.Controls.Add(this.txtCpf);
             this.Controls.Add(this.txtNome);
-            this.Controls.Add(this.txtId);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -209,7 +232,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.TextBox txtCpf;
         private System.Windows.Forms.TextBox txtSexo;
@@ -217,6 +239,9 @@
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnRemover;
         private System.Windows.Forms.Button btnSair;
+        private System.Windows.Forms.Label lblId;
+        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Button btnGravar;
     }
 }
 

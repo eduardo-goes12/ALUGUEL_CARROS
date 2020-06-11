@@ -51,16 +51,33 @@ namespace ALUGUEL_CARROS
             btnCancelar.Enabled = !status;
             btnGravar.Enabled = !status;
         }
-        private void FrmCarros_Load(object sender, EventArgs e)
+
+        private void limparTxts()
         {
+            txtModelo.Clear();
+            txtMarca.Clear();
+            txtChassi.Clear();
+            txtAno.Clear();
+            txtPlaca.Clear();
+            txtSituacao.Clear();
+        }
+        private void FrmCarros_Load(object sender, EventArgs e)
+        {            
             controlesOnOff(false);
             btnOnOff(true);
+
+            CAMADAS.BLL.Carros bllCarro = new CAMADAS.BLL.Carros();
+            dtGrvCarro.DataSource = "";
+            dtGrvCarro.DataSource = bllCarro.Select();
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            lblId.Text = "-1";
             controlesOnOff(true);
             btnOnOff(false);
+            CAMADAS.BLL.Carros bllCarro = new CAMADAS.BLL.Carros();
+
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
@@ -71,14 +88,61 @@ namespace ALUGUEL_CARROS
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
+            limparTxts();
             controlesOnOff(false);
-            btnOnOff(false);
+            btnOnOff(true);
         }
 
         private void btnGravar_Click(object sender, EventArgs e)
         {
+            //coloca aqui antes de apagar
+            CAMADAS.BLL.Carros bllCarro = new CAMADAS.BLL.Carros();
+            string msg = "";
+
+            if(lblId.Text == "-1")
+            {
+                msg = "Deseja Inserir um novo Carro?";
+            }
+            else
+            {
+                msg = "Deseja Alterar o Carro atual?";
+            }
+            DialogResult resposta = MessageBox.Show(msg, "Gravar", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1);
+            if(resposta == DialogResult.Yes)
+            {
+                CAMADAS.MODEL.Carros carro = new CAMADAS.MODEL.Carros();
+                carro.id = Convert.ToInt32(lblId.Text);
+                carro.modelo = txtModelo.Text;
+                carro.marca = txtMarca.Text;
+                carro.chassi = txtChassi.Text;
+                carro.ano = Convert.ToInt32(txtAno.Text);
+                carro.placa = txtPlaca.Text;
+                carro.situacao = Convert.ToInt32(txtSituacao.Text);
+                if(lblId.Text == "-1")
+                {
+                    bllCarro.Insert(carro);
+                }
+                else
+                {
+                    bllCarro.Update(carro);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Não Gravado", "Gravar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            dtGrvCarro.DataSource = bllCarro.Select();
+
+            //apaga
+            limparTxts();
             controlesOnOff(false);
             btnOnOff(true);
+        }
+
+        private void dtGrvCadastroCarro_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
