@@ -92,6 +92,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -106,6 +107,32 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="CAMADAS\Resources\profile_plus_1354.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CAMADAS\Resources\edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CAMADAS\Resources\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CAMADAS\Resources\X.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CAMADAS\Resources\new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CAMADAS\Resources\place.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CAMADAS\Resources\left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CAMADAS\Resources\tab.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CAMADAS\Resources\3d_modelling_819.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
