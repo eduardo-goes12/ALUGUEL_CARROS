@@ -18,6 +18,25 @@ namespace ALUGUEL_CARROS.CAMADAS.BLL
             return dalCarro.Select();
         }
 
+        public List<MODEL.Carros> SelectById(int id)
+        {
+            DAL.Carros dalCarro = new DAL.Carros();
+            //regras de negocios
+
+
+            //fim das regras
+            return dalCarro.SelectById(id);
+        }
+
+        public List<MODEL.Carros> SelectByModelo(string modelo)
+        {
+            DAL.Carros dalCarro = new DAL.Carros();
+            //regras de negocios
+
+
+            //fim das regras
+            return dalCarro.SelectByModelo(modelo);
+        }
         public void Insert(MODEL.Carros carro)
         {
             DAL.Carros dalCarro = new DAL.Carros();

@@ -56,6 +56,7 @@ namespace ALUGUEL_CARROS
 
         private void limparTxts()
         {
+            lblId.Text = "-1";
             txtNome.Clear();
             txtCpf.Clear();
             txtSexo.Clear();
@@ -77,44 +78,36 @@ namespace ALUGUEL_CARROS
         private void btnEditar_Click(object sender, EventArgs e)
         {
             controlesOnOff(true);
-            btnOnOff(false);
-            //criando objeto cliente
-            CAMADAS.MODEL.Clientes cliente = new CAMADAS.MODEL.Clientes();
-            //cliente.id = Convert.ToInt32(txtId.Text);
-            cliente.nome = txtNome.Text;
-            cliente.cpf = txtCpf.Text;
-            cliente.sexo = txtSexo.Text;
-
-            //criando objeto dalCliente para att dados
-            CAMADAS.DAL.Clientes dalCliente = new CAMADAS.DAL.Clientes();
-            dalCliente.Update(cliente);
-
-            //atualizando dataGridView
-            dtGrvClientes.DataSource = "";
-            dtGrvClientes.DataSource = dalCliente.Select();
-
-            //limpando campos txts
-            //txtId.Clear();
-            txtNome.Clear();
-            txtCpf.Clear();
-            txtSexo.Clear();
+            btnOnOff(false);            
         }
 
         private void btnRemover_Click(object sender, EventArgs e)
         {
-            //buscando id
-            //int idCli = Convert.ToInt32(txtId.Text);
+            CAMADAS.BLL.Clientes bllCliente = new CAMADAS.BLL.Clientes();
+            string msg = "";
 
-            //criando obj Cliente
-            CAMADAS.DAL.Clientes dalCliente = new CAMADAS.DAL.Clientes();
-            //bllCli.Delete(idCli);
+            if (lblId.Text != "-1")
+            {
+                msg = "Deseja Remover o Cliente selecionado?";
+                DialogResult resp = MessageBox.Show(msg, "Remover", MessageBoxButtons.YesNo, MessageBoxIcon.Stop, MessageBoxDefaultButton.Button2);
+                if (resp == DialogResult.Yes)
+                {
+                    int idCliente = Convert.ToInt32(lblId.Text);
+                    bllCliente.Delete(idCliente);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Não há dados para Remover", "Remover", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
 
-            //carregando dtgrv
             dtGrvClientes.DataSource = "";
-            dtGrvClientes.DataSource = dalCliente.Select();
+            dtGrvClientes.DataSource = bllCliente.Select();
+            limparTxts();
 
-            //limpando txtId
-            //txtId.Clear();
+
+
+
 
         }
 
@@ -178,6 +171,91 @@ namespace ALUGUEL_CARROS
         private void label2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void dtGrvClientes_DoubleClick(object sender, EventArgs e)
+        {
+            lblId.Text = dtGrvClientes.SelectedRows[0].Cells["id"].Value.ToString();
+            txtNome.Text = dtGrvClientes.SelectedRows[0].Cells["nome"].Value.ToString();
+            txtCpf.Text = dtGrvClientes.SelectedRows[0].Cells["cpf"].Value.ToString();
+            txtSexo.Text = dtGrvClientes.SelectedRows[0].Cells["sexo"].Value.ToString();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rdbTodos_CheckedChanged(object sender, EventArgs e)
+        {
+            lblFiltrar.Visible = false;
+            txtFiltro.Visible = false;
+        }
+
+        private void btnPesquisar_Click(object sender, EventArgs e)
+        {
+            gpbPesquisa.Visible = !gpbPesquisa.Visible;
+            rdbTodos.Checked = true;
+        }
+
+        private void rdbId_CheckedChanged(object sender, EventArgs e)
+        {
+            txtFiltro.Clear();
+            lblFiltrar.Text = "Digite o Id: ";
+            lblFiltrar.Visible = true;
+            txtFiltro.Visible = true;
+            txtFiltro.Focus();
+        }
+
+     
+
+        private void rdbNome_CheckedChanged(object sender, EventArgs e)
+        {
+            txtFiltro.Clear();
+            lblFiltrar.Text = "Digite o Nome: ";
+            lblFiltrar.Visible = true;
+            txtFiltro.Visible = true;
+            txtFiltro.Focus();
+        }
+
+        private void btnFiltro_Click(object sender, EventArgs e)
+        {
+            CAMADAS.BLL.Clientes bllCliente = new CAMADAS.BLL.Clientes();
+            List<CAMADAS.MODEL.Clientes> lstClientes = new List<CAMADAS.MODEL.Clientes>();
+
+            if (rdbTodos.Checked)
+            {
+                lstClientes = bllCliente.Select();
+            }
+            else if (rdbId.Checked)
+            {
+                int id = Convert.ToInt32(txtFiltro.Text);
+                lstClientes = bllCliente.SelectById(id);
+            }
+            else if (rdbNome.Checked)
+            {
+                lstClientes = bllCliente.SelectByNome(txtFiltro.Text);
+            }
+            else if (rdbCPF.Checked)
+            {
+                lstClientes = bllCliente.SelectByCPF(txtFiltro.Text);
+            }
+            dtGrvClientes.DataSource = "";
+            dtGrvClientes.DataSource = lstClientes;
+        }
+
+        private void rdbCPF_CheckedChanged(object sender, EventArgs e)
+        {
+            txtFiltro.Clear();
+            lblFiltrar.Text = "Digite o CPF: ";
+            lblFiltrar.Visible = true;
+            txtFiltro.Visible = true;
+            txtFiltro.Focus();
         }
     }
 }

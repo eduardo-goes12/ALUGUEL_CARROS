@@ -54,6 +54,7 @@ namespace ALUGUEL_CARROS
 
         private void limparTxts()
         {
+            lblId.Text = "-1";
             txtModelo.Clear();
             txtMarca.Clear();
             txtChassi.Clear();
@@ -95,7 +96,7 @@ namespace ALUGUEL_CARROS
 
         private void btnGravar_Click(object sender, EventArgs e)
         {
-            //coloca aqui antes de apagar
+            
             CAMADAS.BLL.Carros bllCarro = new CAMADAS.BLL.Carros();
             string msg = "";
 
@@ -148,6 +149,105 @@ namespace ALUGUEL_CARROS
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void dtGrvCarro_DoubleClick(object sender, EventArgs e)
+        {
+            lblId.Text = dtGrvCarro.SelectedRows[0].Cells["id"].Value.ToString();
+            txtModelo.Text = dtGrvCarro.SelectedRows[0].Cells["modelo"].Value.ToString();
+            txtMarca.Text = dtGrvCarro.SelectedRows[0].Cells["marca"].Value.ToString();
+            txtChassi.Text = dtGrvCarro.SelectedRows[0].Cells["chassi"].Value.ToString();
+            txtAno.Text = dtGrvCarro.SelectedRows[0].Cells["ano"].Value.ToString();
+            txtPlaca.Text = dtGrvCarro.SelectedRows[0].Cells["placa"].Value.ToString();
+            txtSituacao.Text = dtGrvCarro.SelectedRows[0].Cells["situacao"].Value.ToString();
+        }
+
+        private void btnRemover_Click(object sender, EventArgs e)
+        {
+            CAMADAS.BLL.Carros bllCarro = new CAMADAS.BLL.Carros();
+            string msg = "";
+
+            if (lblId.Text != "-1")
+            {
+                msg = "Deseja Remover o Carro selecionado?";
+                DialogResult resp = MessageBox.Show(msg, "Remover", MessageBoxButtons.YesNo, MessageBoxIcon.Stop, MessageBoxDefaultButton.Button2);
+                if(resp == DialogResult.Yes)
+                {
+                    int idCarro = Convert.ToInt32(lblId.Text);
+                    bllCarro.Delete(idCarro);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Não há dados para Remover", "Remover", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
+            dtGrvCarro.DataSource = "";
+            dtGrvCarro.DataSource = bllCarro.Select();
+            limparTxts();
+
+        }
+
+        private void btnPesquisar_Click(object sender, EventArgs e)
+        {
+            gpbPesquisa.Visible = !gpbPesquisa.Visible;
+            rdbTodos.Checked = true;
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rdbId_CheckedChanged(object sender, EventArgs e)
+        {
+            txtFiltro.Clear();
+            lblFiltrar.Text = "Digite o Id: ";
+            lblFiltrar.Visible = true;
+            txtFiltro.Visible = true;
+            txtFiltro.Focus();
+        }
+
+        private void rdbModelo_CheckedChanged(object sender, EventArgs e)
+        {
+            txtFiltro.Clear();
+            lblFiltrar.Text = "Digite o Modelo: ";
+            lblFiltrar.Visible = true;
+            txtFiltro.Visible = true;
+            txtFiltro.Focus();
+        }
+
+        private void rdbTodos_CheckedChanged(object sender, EventArgs e)
+        {
+            lblFiltrar.Visible = false;
+            txtFiltro.Visible = false;
+        }
+
+        private void btnFiltro_Click(object sender, EventArgs e)
+        {
+            CAMADAS.BLL.Carros bllcarro = new CAMADAS.BLL.Carros();
+            List<CAMADAS.MODEL.Carros> lstCarros = new List<CAMADAS.MODEL.Carros>();
+
+            if (rdbTodos.Checked)
+            {
+                lstCarros = bllcarro.Select();
+            }
+            else if (rdbId.Checked)
+            {
+                int id = Convert.ToInt32(txtFiltro.Text);
+                lstCarros = bllcarro.SelectById(id);
+            }
+                else
+                {
+                lstCarros = bllcarro.SelectByModelo(txtFiltro.Text);
+                }
+            dtGrvCarro.DataSource = "";
+            dtGrvCarro.DataSource = lstCarros;
         }
     }
 }

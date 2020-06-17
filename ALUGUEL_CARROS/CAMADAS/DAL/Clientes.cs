@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data;
+using System.Reflection.Emit;
 
 namespace ALUGUEL_CARROS.CAMADAS.DAL
 {
@@ -137,5 +138,121 @@ namespace ALUGUEL_CARROS.CAMADAS.DAL
             }
 
         }
+
+
+        public List<MODEL.Clientes> SelectbyId(int id)
+        {
+            List<MODEL.Clientes> lstClientes = new List<MODEL.Clientes>();
+            SqlConnection conexao = new SqlConnection(strCon);
+            string sql = "Select * from Clientes where id = @id;";
+            SqlCommand cmd = new SqlCommand(sql, conexao);
+            cmd.Parameters.AddWithValue("@id", id);
+            //tratamento exceção
+            try
+            {
+                conexao.Open();
+                SqlDataReader dados = cmd.ExecuteReader(CommandBehavior.CloseConnection);
+                while (dados.Read())
+                {
+
+                    MODEL.Clientes cliente = new MODEL.Clientes();
+                    cliente.id = Convert.ToInt32(dados["id"].ToString());
+                    cliente.nome = dados["nome"].ToString();
+                    cliente.cpf = dados["cpf"].ToString();
+                    cliente.sexo = dados["sexo"].ToString();
+
+                    lstClientes.Add(cliente);
+
+
+
+                }
+            }
+            catch
+            {
+                Console.WriteLine("Erro no Select Clientes");
+            }
+            finally
+            {
+                conexao.Close();
+            }
+            return lstClientes;
+        }
+
+        public List<MODEL.Clientes> SelectByNome(string nome)
+        {
+            List<MODEL.Clientes> lstClientes = new List<MODEL.Clientes>();
+            SqlConnection conexao = new SqlConnection(strCon);
+            string sql = "Select * from Clientes where (nome like @nome); ";
+            SqlCommand cmd = new SqlCommand(sql, conexao);
+            cmd.Parameters.AddWithValue("@nome", "%" + nome.Trim() + "%");
+            //tratamento exceção
+            try
+            {
+                conexao.Open();
+                SqlDataReader dados = cmd.ExecuteReader(CommandBehavior.CloseConnection);
+                while (dados.Read())
+                {
+
+                    MODEL.Clientes cliente = new MODEL.Clientes();
+                    cliente.id = Convert.ToInt32(dados["id"].ToString());
+                    cliente.nome = dados["nome"].ToString();
+                    cliente.cpf = dados["cpf"].ToString();
+                    cliente.sexo = dados["sexo"].ToString();
+
+                    lstClientes.Add(cliente);
+
+
+
+                }
+            }
+            catch
+            {
+                Console.WriteLine("Erro no Select Clientes");
+            }
+            finally
+            {
+                conexao.Close();
+            }
+            return lstClientes;
+        }
+
+        public List<MODEL.Clientes> SelectByCPF(string cpf)
+        {
+            List<MODEL.Clientes> lstClientes = new List<MODEL.Clientes>();
+            SqlConnection conexao = new SqlConnection(strCon);
+            string sql = "Select * from Clientes where (cpf like @cpf); ";
+            SqlCommand cmd = new SqlCommand(sql, conexao);
+            cmd.Parameters.AddWithValue("@cpf", "%" + cpf.Trim() + "%");
+            //tratamento exceção
+            try
+            {
+                conexao.Open();
+                SqlDataReader dados = cmd.ExecuteReader(CommandBehavior.CloseConnection);
+                while (dados.Read())
+                {
+
+                    MODEL.Clientes cliente = new MODEL.Clientes();
+                    cliente.id = Convert.ToInt32(dados["id"].ToString());
+                    cliente.nome = dados["nome"].ToString();
+                    cliente.cpf = dados["cpf"].ToString();
+                    cliente.sexo = dados["sexo"].ToString();
+
+                    lstClientes.Add(cliente);
+
+
+
+                }
+            }
+            catch
+            {
+                Console.WriteLine("Erro no Select Clientes");
+            }
+            finally
+            {
+                conexao.Close();
+            }
+            return lstClientes;
+        }
+
     }
 }

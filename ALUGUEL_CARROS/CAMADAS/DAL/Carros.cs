@@ -52,6 +52,86 @@ namespace ALUGUEL_CARROS.CAMADAS.DAL
             return lstCarros;
         }
 
+        public List<MODEL.Carros> SelectById(int id)
+        {
+            List<MODEL.Carros> lstCarros = new List<MODEL.Carros>();
+            SqlConnection conexao = new SqlConnection(strCon);
+            string sql = "Select * from Carros where id = @id;";
+            SqlCommand cmd = new SqlCommand(sql, conexao);
+            cmd.Parameters.AddWithValue("@id", id);
+
+            //tratamento exceção
+            try
+            {
+                conexao.Open();
+                SqlDataReader dados = cmd.ExecuteReader(CommandBehavior.CloseConnection);
+                while (dados.Read())
+                {
+                    MODEL.Carros carro = new MODEL.Carros();
+
+                    carro.id = Convert.ToInt32(dados["id"].ToString());
+                    carro.modelo = dados["modelo"].ToString();
+                    carro.marca = dados["marca"].ToString();
+                    carro.chassi = dados["chassi"].ToString();
+                    carro.ano = Convert.ToInt32(dados["ano"].ToString());
+                    carro.placa = dados["placa"].ToString();
+                    carro.situacao = Convert.ToInt32(dados["situacao"].ToString());
+
+                    lstCarros.Add(carro);
+
+                }
+            }
+            catch
+            {
+                Console.WriteLine("Erro no Select Carros");
+            }
+            finally
+            {
+                conexao.Close();
+            }
+            return lstCarros;
+        }
+
+        public List<MODEL.Carros> SelectByModelo(string modelo)
+        {
+            List<MODEL.Carros> lstCarros = new List<MODEL.Carros>();
+            SqlConnection conexao = new SqlConnection(strCon);
+            string sql = "Select * from Carros where (modelo like @modelo);";
+            SqlCommand cmd = new SqlCommand(sql, conexao);
+            cmd.Parameters.AddWithValue("@modelo", "%" + modelo.Trim() + "%");
+
+            //tratamento exceção
+            try
+            {
+                conexao.Open();
+                SqlDataReader dados = cmd.ExecuteReader(CommandBehavior.CloseConnection);
+                while (dados.Read())
+                {
+                    MODEL.Carros carro = new MODEL.Carros();
+
+                    carro.id = Convert.ToInt32(dados["id"].ToString());
+                    carro.modelo = dados["modelo"].ToString();
+                    carro.marca = dados["marca"].ToString();
+                    carro.chassi = dados["chassi"].ToString();
+                    carro.ano = Convert.ToInt32(dados["ano"].ToString());
+                    carro.placa = dados["placa"].ToString();
+                    carro.situacao = Convert.ToInt32(dados["situacao"].ToString());
+
+                    lstCarros.Add(carro);
+
+                }
+            }
+            catch
+            {
+                Console.WriteLine("Erro no Select Carros");
+            }
+            finally
+            {
+                conexao.Close();
+            }
+            return lstCarros;
+        }
+
         //Insert Carros
         public void Insert(MODEL.Carros carro)
         {
