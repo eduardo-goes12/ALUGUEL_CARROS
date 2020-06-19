@@ -139,6 +139,37 @@ namespace ALUGUEL_CARROS.CAMADAS.DAL
 
         }
 
+        public MODEL.Clientes SelectbyIdAluguel(int id)
+        {
+            MODEL.Clientes cliente = new MODEL.Clientes();
+            SqlConnection conexao = new SqlConnection(strCon);
+            string sql = "Select * from Clientes where id = @id;";
+            SqlCommand cmd = new SqlCommand(sql, conexao);
+            cmd.Parameters.AddWithValue("@id", id);
+            //tratamento exceção
+            try
+            {
+                conexao.Open();
+                SqlDataReader dados = cmd.ExecuteReader(CommandBehavior.CloseConnection);
+                if (dados.Read())
+                {
+                    cliente.id = Convert.ToInt32(dados["id"].ToString());
+                    cliente.nome = dados["nome"].ToString();
+                    cliente.cpf = dados["cpf"].ToString();
+                    cliente.sexo = dados["sexo"].ToString();
+                }
+            }
+            catch
+            {
+                Console.WriteLine("Erro no Select Clientes por Id");
+            }
+            finally
+            {
+                conexao.Close();
+            }
+            return cliente;
+        }
+
 
         public List<MODEL.Clientes> SelectbyId(int id)
         {

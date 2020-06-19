@@ -11,13 +11,12 @@ namespace ALUGUEL_CARROS.CAMADAS.MODEL
     {
         public int id { get; set; }
         public int clienteID { get; set; }
-        public string nome { get; set; }
-        public string cpf { get; set; }
+        public string nome { get; set; }        
         public int carroID { get; set; }
         public string modelo { get; set; }
-        public string chassi { get; set; }
-        public int ano { get; set; }
-        public string placa { get; set; }
+        
+        
+       
 
     }
 }

@@ -27,7 +27,7 @@ namespace ALUGUEL_CARROS.CAMADAS.DAL
                 SqlDataReader dados = cmd.ExecuteReader(CommandBehavior.CloseConnection);
                 while (dados.Read())
                 {
-                    MODEL.Carros carro = new MODEL.Carros();
+                   CAMADAS.MODEL.Carros carro = new MODEL.Carros();
 
                     carro.id = Convert.ToInt32(dados["id"].ToString());
                     carro.modelo = dados["modelo"].ToString();
@@ -130,6 +130,45 @@ namespace ALUGUEL_CARROS.CAMADAS.DAL
                 conexao.Close();
             }
             return lstCarros;
+        }
+
+        public MODEL.Carros SelectByIdAluguel(int id)
+        {
+            MODEL.Carros carro = new MODEL.Carros();
+            SqlConnection conexao = new SqlConnection(strCon);
+            string sql = "Select * from Carros where id = @id;";
+            SqlCommand cmd = new SqlCommand(sql, conexao);
+            cmd.Parameters.AddWithValue("@id", id);
+
+            //tratamento exceção
+            try
+            {
+                conexao.Open();
+                SqlDataReader dados = cmd.ExecuteReader(CommandBehavior.CloseConnection);
+                if (dados.Read())
+                {
+                    
+                    carro.id = Convert.ToInt32(dados["id"].ToString());
+                    carro.modelo = dados["modelo"].ToString();
+                    carro.marca = dados["marca"].ToString();
+                    carro.chassi = dados["chassi"].ToString();
+                    carro.ano = Convert.ToInt32(dados["ano"].ToString());
+                    carro.placa = dados["placa"].ToString();
+                    carro.situacao = Convert.ToInt32(dados["situacao"].ToString());
+
+                    
+
+                }
+            }
+            catch
+            {
+                Console.WriteLine("Erro no Select Carros");
+            }
+            finally
+            {
+                conexao.Close();
+            }
+            return carro;
         }
 
         //Insert Carros
