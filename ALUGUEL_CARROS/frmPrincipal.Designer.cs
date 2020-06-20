@@ -28,8 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.cmbCarro = new System.Windows.Forms.ComboBox();
             this.cmbCliente = new System.Windows.Forms.ComboBox();
             this.lblCarro = new System.Windows.Forms.Label();
@@ -56,7 +59,7 @@
             this.cmbCarro.ForeColor = System.Drawing.Color.SpringGreen;
             this.cmbCarro.FormattingEnabled = true;
             this.cmbCarro.Location = new System.Drawing.Point(333, 170);
-            this.cmbCarro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbCarro.Margin = new System.Windows.Forms.Padding(4);
             this.cmbCarro.Name = "cmbCarro";
             this.cmbCarro.Size = new System.Drawing.Size(413, 24);
             this.cmbCarro.TabIndex = 4;
@@ -69,7 +72,7 @@
             this.cmbCliente.ForeColor = System.Drawing.Color.SpringGreen;
             this.cmbCliente.FormattingEnabled = true;
             this.cmbCliente.Location = new System.Drawing.Point(333, 132);
-            this.cmbCliente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbCliente.Margin = new System.Windows.Forms.Padding(4);
             this.cmbCliente.Name = "cmbCliente";
             this.cmbCliente.Size = new System.Drawing.Size(413, 24);
             this.cmbCliente.TabIndex = 3;
@@ -101,26 +104,47 @@
             // 
             // dtGvAluguel
             // 
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(26)))));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.SpringGreen;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.Gray;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.SpringGreen;
-            this.dtGvAluguel.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(26)))));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.SpringGreen;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.SpringGreen;
+            this.dtGvAluguel.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dtGvAluguel.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(26)))));
             this.dtGvAluguel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(26)))));
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.SpringGreen;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.GrayText;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.SpringGreen;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtGvAluguel.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(26)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.SpringGreen;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.GrayText;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.SpringGreen;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtGvAluguel.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dtGvAluguel.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(26)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.SpringGreen;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.SpringGreen;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtGvAluguel.DefaultCellStyle = dataGridViewCellStyle3;
             this.dtGvAluguel.Location = new System.Drawing.Point(292, 337);
-            this.dtGvAluguel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtGvAluguel.Margin = new System.Windows.Forms.Padding(4);
             this.dtGvAluguel.Name = "dtGvAluguel";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(26)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.SpringGreen;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.SpringGreen;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtGvAluguel.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dtGvAluguel.RowHeadersWidth = 51;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(26)))));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.SpringGreen;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.SpringGreen;
+            this.dtGvAluguel.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dtGvAluguel.Size = new System.Drawing.Size(734, 185);
             this.dtGvAluguel.TabIndex = 0;
             this.dtGvAluguel.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtGvAluguel_CellContentClick);
@@ -131,7 +155,7 @@
             this.txtClienteId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(26)))));
             this.txtClienteId.ForeColor = System.Drawing.Color.SpringGreen;
             this.txtClienteId.Location = new System.Drawing.Point(777, 132);
-            this.txtClienteId.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtClienteId.Margin = new System.Windows.Forms.Padding(4);
             this.txtClienteId.Name = "txtClienteId";
             this.txtClienteId.ReadOnly = true;
             this.txtClienteId.Size = new System.Drawing.Size(132, 22);
@@ -156,7 +180,7 @@
             this.txtCarroId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(26)))));
             this.txtCarroId.ForeColor = System.Drawing.Color.SpringGreen;
             this.txtCarroId.Location = new System.Drawing.Point(777, 171);
-            this.txtCarroId.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCarroId.Margin = new System.Windows.Forms.Padding(4);
             this.txtCarroId.Name = "txtCarroId";
             this.txtCarroId.ReadOnly = true;
             this.txtCarroId.Size = new System.Drawing.Size(132, 22);
@@ -316,7 +340,7 @@
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmPrincipal";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

@@ -30,6 +30,9 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.lblModelo = new System.Windows.Forms.Label();
             this.lblMarca = new System.Windows.Forms.Label();
@@ -46,13 +49,13 @@
             this.txtSituacao = new System.Windows.Forms.TextBox();
             this.dtGrvCarro = new System.Windows.Forms.DataGridView();
             this.gpbPesquisa = new System.Windows.Forms.GroupBox();
+            this.btnFiltro = new System.Windows.Forms.Button();
             this.txtFiltro = new System.Windows.Forms.TextBox();
             this.lblFiltrar = new System.Windows.Forms.Label();
             this.rdbTodos = new System.Windows.Forms.RadioButton();
             this.rdbId = new System.Windows.Forms.RadioButton();
             this.rdbModelo = new System.Windows.Forms.RadioButton();
             this.btnPesquisar = new System.Windows.Forms.Button();
-            this.btnFiltro = new System.Windows.Forms.Button();
             this.btnVoltar = new System.Windows.Forms.Button();
             this.btnGravar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
@@ -164,7 +167,7 @@
             this.txtModelo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(26)))));
             this.txtModelo.ForeColor = System.Drawing.Color.SpringGreen;
             this.txtModelo.Location = new System.Drawing.Point(271, 68);
-            this.txtModelo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtModelo.Margin = new System.Windows.Forms.Padding(4);
             this.txtModelo.Name = "txtModelo";
             this.txtModelo.Size = new System.Drawing.Size(275, 22);
             this.txtModelo.TabIndex = 1;
@@ -174,7 +177,7 @@
             this.txtAno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(26)))));
             this.txtAno.ForeColor = System.Drawing.Color.SpringGreen;
             this.txtAno.Location = new System.Drawing.Point(269, 213);
-            this.txtAno.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtAno.Margin = new System.Windows.Forms.Padding(4);
             this.txtAno.Name = "txtAno";
             this.txtAno.Size = new System.Drawing.Size(276, 22);
             this.txtAno.TabIndex = 4;
@@ -184,7 +187,7 @@
             this.txtChassi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(26)))));
             this.txtChassi.ForeColor = System.Drawing.Color.SpringGreen;
             this.txtChassi.Location = new System.Drawing.Point(271, 167);
-            this.txtChassi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtChassi.Margin = new System.Windows.Forms.Padding(4);
             this.txtChassi.Name = "txtChassi";
             this.txtChassi.Size = new System.Drawing.Size(275, 22);
             this.txtChassi.TabIndex = 3;
@@ -194,7 +197,7 @@
             this.txtMarca.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(26)))));
             this.txtMarca.ForeColor = System.Drawing.Color.SpringGreen;
             this.txtMarca.Location = new System.Drawing.Point(269, 117);
-            this.txtMarca.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtMarca.Margin = new System.Windows.Forms.Padding(4);
             this.txtMarca.Name = "txtMarca";
             this.txtMarca.Size = new System.Drawing.Size(276, 22);
             this.txtMarca.TabIndex = 2;
@@ -204,7 +207,7 @@
             this.txtPlaca.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(26)))));
             this.txtPlaca.ForeColor = System.Drawing.Color.SpringGreen;
             this.txtPlaca.Location = new System.Drawing.Point(269, 261);
-            this.txtPlaca.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPlaca.Margin = new System.Windows.Forms.Padding(4);
             this.txtPlaca.Name = "txtPlaca";
             this.txtPlaca.Size = new System.Drawing.Size(276, 22);
             this.txtPlaca.TabIndex = 5;
@@ -214,7 +217,7 @@
             this.txtSituacao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(26)))));
             this.txtSituacao.ForeColor = System.Drawing.Color.SpringGreen;
             this.txtSituacao.Location = new System.Drawing.Point(269, 309);
-            this.txtSituacao.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSituacao.Margin = new System.Windows.Forms.Padding(4);
             this.txtSituacao.Name = "txtSituacao";
             this.txtSituacao.Size = new System.Drawing.Size(276, 22);
             this.txtSituacao.TabIndex = 6;
@@ -236,10 +239,32 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dtGrvCarro.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dtGrvCarro.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(26)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.SpringGreen;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.SpringGreen;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtGrvCarro.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dtGrvCarro.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
             this.dtGrvCarro.Location = new System.Drawing.Point(131, 478);
-            this.dtGrvCarro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtGrvCarro.Margin = new System.Windows.Forms.Padding(4);
             this.dtGrvCarro.Name = "dtGrvCarro";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(26)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.SpringGreen;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.SpringGreen;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtGrvCarro.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dtGrvCarro.RowHeadersWidth = 51;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(26)))));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.SpringGreen;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.SpringGreen;
+            this.dtGrvCarro.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dtGrvCarro.Size = new System.Drawing.Size(981, 185);
             this.dtGrvCarro.TabIndex = 20;
             this.dtGrvCarro.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtGrvCadastroCarro_CellContentClick);
@@ -255,21 +280,36 @@
             this.gpbPesquisa.Controls.Add(this.rdbModelo);
             this.gpbPesquisa.ForeColor = System.Drawing.Color.SpringGreen;
             this.gpbPesquisa.Location = new System.Drawing.Point(695, 74);
-            this.gpbPesquisa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gpbPesquisa.Margin = new System.Windows.Forms.Padding(4);
             this.gpbPesquisa.Name = "gpbPesquisa";
-            this.gpbPesquisa.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gpbPesquisa.Padding = new System.Windows.Forms.Padding(4);
             this.gpbPesquisa.Size = new System.Drawing.Size(417, 256);
             this.gpbPesquisa.TabIndex = 21;
             this.gpbPesquisa.TabStop = false;
             this.gpbPesquisa.Text = "Pesquisa";
             this.gpbPesquisa.Visible = false;
             // 
+            // btnFiltro
+            // 
+            this.btnFiltro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFiltro.Image = global::ALUGUEL_CARROS.Properties.Resources.filtro;
+            this.btnFiltro.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFiltro.Location = new System.Drawing.Point(307, 215);
+            this.btnFiltro.Margin = new System.Windows.Forms.Padding(4);
+            this.btnFiltro.Name = "btnFiltro";
+            this.btnFiltro.Size = new System.Drawing.Size(100, 28);
+            this.btnFiltro.TabIndex = 5;
+            this.btnFiltro.Text = "&Filtrar";
+            this.btnFiltro.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnFiltro.UseVisualStyleBackColor = true;
+            this.btnFiltro.Click += new System.EventHandler(this.btnFiltro_Click);
+            // 
             // txtFiltro
             // 
             this.txtFiltro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(26)))));
             this.txtFiltro.ForeColor = System.Drawing.Color.SpringGreen;
             this.txtFiltro.Location = new System.Drawing.Point(32, 164);
-            this.txtFiltro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtFiltro.Margin = new System.Windows.Forms.Padding(4);
             this.txtFiltro.Name = "txtFiltro";
             this.txtFiltro.Size = new System.Drawing.Size(361, 22);
             this.txtFiltro.TabIndex = 4;
@@ -291,7 +331,7 @@
             this.rdbTodos.Checked = true;
             this.rdbTodos.ForeColor = System.Drawing.Color.SpringGreen;
             this.rdbTodos.Location = new System.Drawing.Point(28, 23);
-            this.rdbTodos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rdbTodos.Margin = new System.Windows.Forms.Padding(4);
             this.rdbTodos.Name = "rdbTodos";
             this.rdbTodos.Size = new System.Drawing.Size(69, 21);
             this.rdbTodos.TabIndex = 2;
@@ -305,7 +345,7 @@
             this.rdbId.AutoSize = true;
             this.rdbId.ForeColor = System.Drawing.Color.SpringGreen;
             this.rdbId.Location = new System.Drawing.Point(28, 54);
-            this.rdbId.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rdbId.Margin = new System.Windows.Forms.Padding(4);
             this.rdbId.Name = "rdbId";
             this.rdbId.Size = new System.Drawing.Size(42, 21);
             this.rdbId.TabIndex = 1;
@@ -318,7 +358,7 @@
             this.rdbModelo.AutoSize = true;
             this.rdbModelo.ForeColor = System.Drawing.Color.SpringGreen;
             this.rdbModelo.Location = new System.Drawing.Point(28, 82);
-            this.rdbModelo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rdbModelo.Margin = new System.Windows.Forms.Padding(4);
             this.rdbModelo.Name = "rdbModelo";
             this.rdbModelo.Size = new System.Drawing.Size(75, 21);
             this.rdbModelo.TabIndex = 0;
@@ -341,21 +381,6 @@
             this.btnPesquisar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnPesquisar.UseVisualStyleBackColor = true;
             this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
-            // 
-            // btnFiltro
-            // 
-            this.btnFiltro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFiltro.Image = global::ALUGUEL_CARROS.Properties.Resources.filtro;
-            this.btnFiltro.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFiltro.Location = new System.Drawing.Point(307, 215);
-            this.btnFiltro.Margin = new System.Windows.Forms.Padding(4);
-            this.btnFiltro.Name = "btnFiltro";
-            this.btnFiltro.Size = new System.Drawing.Size(100, 28);
-            this.btnFiltro.TabIndex = 5;
-            this.btnFiltro.Text = "&Filtrar";
-            this.btnFiltro.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnFiltro.UseVisualStyleBackColor = true;
-            this.btnFiltro.Click += new System.EventHandler(this.btnFiltro_Click);
             // 
             // btnVoltar
             // 
@@ -483,7 +508,7 @@
             this.Controls.Add(this.lblModelo);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmCadastroCarros";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form2";
