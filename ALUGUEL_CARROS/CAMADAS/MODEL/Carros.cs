@@ -14,6 +14,6 @@ namespace ALUGUEL_CARROS.CAMADAS.MODEL
         public string chassi { get; set; }
         public int ano { get; set; }
         public string placa { get; set; }
-        public int situacao { get; set; }
+        
     }
 }

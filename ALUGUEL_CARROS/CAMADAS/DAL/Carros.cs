@@ -35,7 +35,7 @@ namespace ALUGUEL_CARROS.CAMADAS.DAL
                     carro.chassi = dados["chassi"].ToString();
                     carro.ano = Convert.ToInt32(dados["ano"].ToString());
                     carro.placa = dados["placa"].ToString();
-                    carro.situacao = Convert.ToInt32(dados["situacao"].ToString());                   
+                                       
 
                     lstCarros.Add(carro);
 
@@ -75,7 +75,7 @@ namespace ALUGUEL_CARROS.CAMADAS.DAL
                     carro.chassi = dados["chassi"].ToString();
                     carro.ano = Convert.ToInt32(dados["ano"].ToString());
                     carro.placa = dados["placa"].ToString();
-                    carro.situacao = Convert.ToInt32(dados["situacao"].ToString());
+                    
 
                     lstCarros.Add(carro);
 
@@ -115,7 +115,7 @@ namespace ALUGUEL_CARROS.CAMADAS.DAL
                     carro.chassi = dados["chassi"].ToString();
                     carro.ano = Convert.ToInt32(dados["ano"].ToString());
                     carro.placa = dados["placa"].ToString();
-                    carro.situacao = Convert.ToInt32(dados["situacao"].ToString());
+                    
 
                     lstCarros.Add(carro);
 
@@ -154,7 +154,7 @@ namespace ALUGUEL_CARROS.CAMADAS.DAL
                     carro.chassi = dados["chassi"].ToString();
                     carro.ano = Convert.ToInt32(dados["ano"].ToString());
                     carro.placa = dados["placa"].ToString();
-                    carro.situacao = Convert.ToInt32(dados["situacao"].ToString());
+                    
 
                     
 
@@ -175,7 +175,7 @@ namespace ALUGUEL_CARROS.CAMADAS.DAL
         public void Insert(MODEL.Carros carro)
         {
             SqlConnection conexao = new SqlConnection(strCon);
-            string sql = "insert into Carros values(@modelo, @marca, @chassi, @ano, @placa, @situacao);";
+            string sql = "insert into Carros values(@modelo, @marca, @chassi, @ano, @placa);";
             SqlCommand cmd = new SqlCommand(sql, conexao);
 
             //adicionando os parametros        
@@ -184,7 +184,7 @@ namespace ALUGUEL_CARROS.CAMADAS.DAL
             cmd.Parameters.AddWithValue("@chassi", carro.chassi);
             cmd.Parameters.AddWithValue("@ano", carro.ano);
             cmd.Parameters.AddWithValue("@placa", carro.placa);
-            cmd.Parameters.AddWithValue("@situacao", carro.situacao);       
+                  
 
 
             //tratamento exceção
@@ -207,7 +207,7 @@ namespace ALUGUEL_CARROS.CAMADAS.DAL
         public void Update(MODEL.Carros carro)
         {
             SqlConnection conexao = new SqlConnection(strCon);
-            string sql = "update Carros set modelo=@modelo, marca=@marca, chassi=@chassi, ano=@ano, placa=@placa, situacao=@situacao ";
+            string sql = "update Carros set modelo=@modelo, marca=@marca, chassi=@chassi, ano=@ano, placa=@placa ";
             sql += " where id=@id;";
             SqlCommand cmd = new SqlCommand(sql, conexao);
 
@@ -218,7 +218,7 @@ namespace ALUGUEL_CARROS.CAMADAS.DAL
             cmd.Parameters.AddWithValue("@chassi", carro.chassi);
             cmd.Parameters.AddWithValue("@ano", carro.ano);
             cmd.Parameters.AddWithValue("@placa", carro.placa);
-            cmd.Parameters.AddWithValue("@situacao", carro.situacao);
+            
 
 
             //tratamento exceção

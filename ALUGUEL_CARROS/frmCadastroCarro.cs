@@ -38,7 +38,7 @@ namespace ALUGUEL_CARROS
             txtChassi.Enabled = status;
             txtAno.Enabled = status;
             txtPlaca.Enabled = status;
-            txtSituacao.Enabled = status;
+            
 
         }
 
@@ -60,7 +60,7 @@ namespace ALUGUEL_CARROS
             txtChassi.Clear();
             txtAno.Clear();
             txtPlaca.Clear();
-            txtSituacao.Clear();
+            
         }
         private void FrmCarros_Load(object sender, EventArgs e)
         {            
@@ -118,7 +118,7 @@ namespace ALUGUEL_CARROS
                 carro.chassi = txtChassi.Text;
                 carro.ano = Convert.ToInt32(txtAno.Text);
                 carro.placa = txtPlaca.Text;
-                carro.situacao = Convert.ToInt32(txtSituacao.Text);
+                
                 if(lblId.Text == "-1")
                 {
                     bllCarro.Insert(carro);
@@ -164,7 +164,7 @@ namespace ALUGUEL_CARROS
             txtChassi.Text = dtGrvCarro.SelectedRows[0].Cells["chassi"].Value.ToString();
             txtAno.Text = dtGrvCarro.SelectedRows[0].Cells["ano"].Value.ToString();
             txtPlaca.Text = dtGrvCarro.SelectedRows[0].Cells["placa"].Value.ToString();
-            txtSituacao.Text = dtGrvCarro.SelectedRows[0].Cells["situacao"].Value.ToString();
+            
         }
 
         private void btnRemover_Click(object sender, EventArgs e)
