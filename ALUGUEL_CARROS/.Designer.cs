@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.lblModelo = new System.Windows.Forms.Label();
             this.lblMarca = new System.Windows.Forms.Label();
@@ -51,13 +51,13 @@
             this.btnRemover = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.gpbPesquisa = new System.Windows.Forms.GroupBox();
-            this.btnPesquisar = new System.Windows.Forms.Button();
-            this.rdbModelo = new System.Windows.Forms.RadioButton();
-            this.rdbId = new System.Windows.Forms.RadioButton();
-            this.rdbTodos = new System.Windows.Forms.RadioButton();
-            this.lblFiltrar = new System.Windows.Forms.Label();
-            this.txtFiltro = new System.Windows.Forms.TextBox();
             this.btnFiltro = new System.Windows.Forms.Button();
+            this.txtFiltro = new System.Windows.Forms.TextBox();
+            this.lblFiltrar = new System.Windows.Forms.Label();
+            this.rdbTodos = new System.Windows.Forms.RadioButton();
+            this.rdbId = new System.Windows.Forms.RadioButton();
+            this.rdbModelo = new System.Windows.Forms.RadioButton();
+            this.btnPesquisar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtGrvCarro)).BeginInit();
             this.gpbPesquisa.SuspendLayout();
             this.SuspendLayout();
@@ -199,11 +199,11 @@
             // 
             // dtGrvCarro
             // 
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(26)))));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.SpringGreen;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.SpringGreen;
-            this.dtGrvCarro.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(26)))));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.SpringGreen;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.SpringGreen;
+            this.dtGrvCarro.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dtGrvCarro.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(26)))));
             this.dtGrvCarro.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtGrvCarro.Location = new System.Drawing.Point(98, 388);
@@ -321,39 +321,32 @@
             this.gpbPesquisa.Text = "Pesquisa";
             this.gpbPesquisa.Visible = false;
             // 
-            // btnPesquisar
+            // btnFiltro
             // 
-            this.btnPesquisar.Location = new System.Drawing.Point(699, 315);
-            this.btnPesquisar.Name = "btnPesquisar";
-            this.btnPesquisar.Size = new System.Drawing.Size(118, 40);
-            this.btnPesquisar.TabIndex = 22;
-            this.btnPesquisar.Text = "&Pesquisar";
-            this.btnPesquisar.UseVisualStyleBackColor = true;
-            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
+            this.btnFiltro.Location = new System.Drawing.Point(230, 175);
+            this.btnFiltro.Name = "btnFiltro";
+            this.btnFiltro.Size = new System.Drawing.Size(75, 23);
+            this.btnFiltro.TabIndex = 5;
+            this.btnFiltro.Text = "&Filtrar";
+            this.btnFiltro.UseVisualStyleBackColor = true;
+            this.btnFiltro.Click += new System.EventHandler(this.btnFiltro_Click);
             // 
-            // rdbModelo
+            // txtFiltro
             // 
-            this.rdbModelo.AutoSize = true;
-            this.rdbModelo.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.rdbModelo.Location = new System.Drawing.Point(21, 67);
-            this.rdbModelo.Name = "rdbModelo";
-            this.rdbModelo.Size = new System.Drawing.Size(60, 17);
-            this.rdbModelo.TabIndex = 0;
-            this.rdbModelo.Text = "&Modelo";
-            this.rdbModelo.UseVisualStyleBackColor = true;
-            this.rdbModelo.CheckedChanged += new System.EventHandler(this.rdbModelo_CheckedChanged);
+            this.txtFiltro.Location = new System.Drawing.Point(24, 133);
+            this.txtFiltro.Name = "txtFiltro";
+            this.txtFiltro.Size = new System.Drawing.Size(272, 20);
+            this.txtFiltro.TabIndex = 4;
+            this.txtFiltro.Visible = false;
+            this.txtFiltro.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // rdbId
+            // lblFiltrar
             // 
-            this.rdbId.AutoSize = true;
-            this.rdbId.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.rdbId.Location = new System.Drawing.Point(21, 44);
-            this.rdbId.Name = "rdbId";
-            this.rdbId.Size = new System.Drawing.Size(34, 17);
-            this.rdbId.TabIndex = 1;
-            this.rdbId.Text = "&Id";
-            this.rdbId.UseVisualStyleBackColor = true;
-            this.rdbId.CheckedChanged += new System.EventHandler(this.rdbId_CheckedChanged);
+            this.lblFiltrar.Location = new System.Drawing.Point(21, 98);
+            this.lblFiltrar.Name = "lblFiltrar";
+            this.lblFiltrar.Size = new System.Drawing.Size(217, 23);
+            this.lblFiltrar.TabIndex = 3;
+            this.lblFiltrar.Visible = false;
             // 
             // rdbTodos
             // 
@@ -369,32 +362,39 @@
             this.rdbTodos.UseVisualStyleBackColor = true;
             this.rdbTodos.CheckedChanged += new System.EventHandler(this.rdbTodos_CheckedChanged);
             // 
-            // lblFiltrar
+            // rdbId
             // 
-            this.lblFiltrar.Location = new System.Drawing.Point(21, 98);
-            this.lblFiltrar.Name = "lblFiltrar";
-            this.lblFiltrar.Size = new System.Drawing.Size(217, 23);
-            this.lblFiltrar.TabIndex = 3;
-            this.lblFiltrar.Visible = false;
+            this.rdbId.AutoSize = true;
+            this.rdbId.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.rdbId.Location = new System.Drawing.Point(21, 44);
+            this.rdbId.Name = "rdbId";
+            this.rdbId.Size = new System.Drawing.Size(34, 17);
+            this.rdbId.TabIndex = 1;
+            this.rdbId.Text = "&Id";
+            this.rdbId.UseVisualStyleBackColor = true;
+            this.rdbId.CheckedChanged += new System.EventHandler(this.rdbId_CheckedChanged);
             // 
-            // txtFiltro
+            // rdbModelo
             // 
-            this.txtFiltro.Location = new System.Drawing.Point(24, 133);
-            this.txtFiltro.Name = "txtFiltro";
-            this.txtFiltro.Size = new System.Drawing.Size(272, 20);
-            this.txtFiltro.TabIndex = 4;
-            this.txtFiltro.Visible = false;
-            this.txtFiltro.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.rdbModelo.AutoSize = true;
+            this.rdbModelo.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.rdbModelo.Location = new System.Drawing.Point(21, 67);
+            this.rdbModelo.Name = "rdbModelo";
+            this.rdbModelo.Size = new System.Drawing.Size(60, 17);
+            this.rdbModelo.TabIndex = 0;
+            this.rdbModelo.Text = "&Modelo";
+            this.rdbModelo.UseVisualStyleBackColor = true;
+            this.rdbModelo.CheckedChanged += new System.EventHandler(this.rdbModelo_CheckedChanged);
             // 
-            // btnFiltro
+            // btnPesquisar
             // 
-            this.btnFiltro.Location = new System.Drawing.Point(230, 175);
-            this.btnFiltro.Name = "btnFiltro";
-            this.btnFiltro.Size = new System.Drawing.Size(75, 23);
-            this.btnFiltro.TabIndex = 5;
-            this.btnFiltro.Text = "&Filtrar";
-            this.btnFiltro.UseVisualStyleBackColor = true;
-            this.btnFiltro.Click += new System.EventHandler(this.btnFiltro_Click);
+            this.btnPesquisar.Location = new System.Drawing.Point(699, 315);
+            this.btnPesquisar.Name = "btnPesquisar";
+            this.btnPesquisar.Size = new System.Drawing.Size(118, 40);
+            this.btnPesquisar.TabIndex = 22;
+            this.btnPesquisar.Text = "&Pesquisar";
+            this.btnPesquisar.UseVisualStyleBackColor = true;
+            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
             // 
             // frmCadastroCarros
             // 
@@ -427,6 +427,7 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmCadastroCarros";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.FrmCarros_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtGrvCarro)).EndInit();

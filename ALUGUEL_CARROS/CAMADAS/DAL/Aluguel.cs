@@ -85,6 +85,68 @@ namespace ALUGUEL_CARROS.CAMADAS.DAL
                 conexao.Close();
             }
         }
+        public MODEL.Aluguel BuscaCliente(int id)
+        {
+            MODEL.Aluguel aluguel = new MODEL.Aluguel();
+            SqlConnection conexao = new SqlConnection(strCon);
+            string sql = "Select * from Aluguel where clienteID = @id;";
+            SqlCommand cmd = new SqlCommand(sql, conexao);
+            cmd.Parameters.AddWithValue("@id", id);
+            //tratamento exceção
+            try
+            {
+                conexao.Open();
+                SqlDataReader dados = cmd.ExecuteReader(CommandBehavior.CloseConnection);
+                if (dados.Read())
+                {
+                    aluguel.id = Convert.ToInt32(dados["id"].ToString());
+                    aluguel.clienteID = Convert.ToInt32(dados["clienteID"].ToString());
+                    aluguel.nome = dados["nome"].ToString();
+                    aluguel.carroID = Convert.ToInt32(dados["carroID"].ToString());
+                    aluguel.modelo = dados["modelo"].ToString();                    
+                }
+            }
+            catch
+            {
+                Console.WriteLine("Erro no Select Clientes por Id");
+            }
+            finally
+            {
+                conexao.Close();
+            }
+            return aluguel;
+        }
+        public MODEL.Aluguel BuscaCarro(int id)
+        {
+            MODEL.Aluguel aluguel = new MODEL.Aluguel();
+            SqlConnection conexao = new SqlConnection(strCon);
+            string sql = "Select * from Aluguel where carroID = @id;";
+            SqlCommand cmd = new SqlCommand(sql, conexao);
+            cmd.Parameters.AddWithValue("@id", id);
+            //tratamento exceção
+            try
+            {
+                conexao.Open();
+                SqlDataReader dados = cmd.ExecuteReader(CommandBehavior.CloseConnection);
+                if (dados.Read())
+                {
+                    aluguel.id = Convert.ToInt32(dados["id"].ToString());
+                    aluguel.clienteID = Convert.ToInt32(dados["clienteID"].ToString());
+                    aluguel.nome = dados["nome"].ToString();
+                    aluguel.carroID = Convert.ToInt32(dados["carroID"].ToString());
+                    aluguel.modelo = dados["modelo"].ToString();
+                }
+            }
+            catch
+            {
+                Console.WriteLine("Erro no Select Clientes por Id");
+            }
+            finally
+            {
+                conexao.Close();
+            }
+            return aluguel;
+        }
 
         //Update Carros
         public void Update(MODEL.Aluguel aluguel)
