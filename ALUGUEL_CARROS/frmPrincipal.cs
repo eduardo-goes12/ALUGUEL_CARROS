@@ -215,5 +215,15 @@ namespace ALUGUEL_CARROS
             cmbCarro.ValueMember = "id";
             cmbCarro.DataSource = dalCar.Select();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

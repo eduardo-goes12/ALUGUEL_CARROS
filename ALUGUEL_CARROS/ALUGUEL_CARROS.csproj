@@ -136,5 +136,23 @@
   <ItemGroup>
     <None Include="CAMADAS\Resources\3d_modelling_819.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="CAMADAS\Resources\pesquisa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CAMADAS\Resources\filtro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CAMADAS\Resources\profile_1341.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CAMADAS\Resources\car_640.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CAMADAS\Resources\carro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CAMADAS\Resources\arrow_repeat_242.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
