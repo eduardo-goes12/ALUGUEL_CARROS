@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.cmbCarro = new System.Windows.Forms.ComboBox();
             this.cmbCliente = new System.Windows.Forms.ComboBox();
             this.lblCarro = new System.Windows.Forms.Label();
@@ -55,10 +55,9 @@
             this.cmbCarro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbCarro.ForeColor = System.Drawing.Color.SpringGreen;
             this.cmbCarro.FormattingEnabled = true;
-            this.cmbCarro.Location = new System.Drawing.Point(333, 170);
-            this.cmbCarro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbCarro.Location = new System.Drawing.Point(250, 138);
             this.cmbCarro.Name = "cmbCarro";
-            this.cmbCarro.Size = new System.Drawing.Size(413, 24);
+            this.cmbCarro.Size = new System.Drawing.Size(311, 21);
             this.cmbCarro.TabIndex = 4;
             this.cmbCarro.SelectedIndexChanged += new System.EventHandler(this.cmbCarro_SelectedIndexChanged);
             // 
@@ -68,10 +67,9 @@
             this.cmbCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbCliente.ForeColor = System.Drawing.Color.SpringGreen;
             this.cmbCliente.FormattingEnabled = true;
-            this.cmbCliente.Location = new System.Drawing.Point(333, 132);
-            this.cmbCliente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbCliente.Location = new System.Drawing.Point(250, 107);
             this.cmbCliente.Name = "cmbCliente";
-            this.cmbCliente.Size = new System.Drawing.Size(413, 24);
+            this.cmbCliente.Size = new System.Drawing.Size(311, 21);
             this.cmbCliente.TabIndex = 3;
             this.cmbCliente.SelectedIndexChanged += new System.EventHandler(this.cbmCliente_SelectedIndexChanged);
             // 
@@ -80,48 +78,45 @@
             this.lblCarro.AutoSize = true;
             this.lblCarro.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCarro.ForeColor = System.Drawing.Color.SpringGreen;
-            this.lblCarro.Location = new System.Drawing.Point(233, 170);
-            this.lblCarro.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCarro.Location = new System.Drawing.Point(175, 138);
             this.lblCarro.Name = "lblCarro";
-            this.lblCarro.Size = new System.Drawing.Size(56, 24);
+            this.lblCarro.Size = new System.Drawing.Size(50, 18);
             this.lblCarro.TabIndex = 8;
-            this.lblCarro.Text = "Carro";
+            this.lblCarro.Text = "Carro:";
             // 
             // lblCliente
             // 
             this.lblCliente.AutoSize = true;
             this.lblCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCliente.ForeColor = System.Drawing.Color.SpringGreen;
-            this.lblCliente.Location = new System.Drawing.Point(233, 142);
-            this.lblCliente.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCliente.Location = new System.Drawing.Point(175, 115);
             this.lblCliente.Name = "lblCliente";
-            this.lblCliente.Size = new System.Drawing.Size(68, 24);
+            this.lblCliente.Size = new System.Drawing.Size(57, 18);
             this.lblCliente.TabIndex = 7;
-            this.lblCliente.Text = "Cliente";
+            this.lblCliente.Text = "Cliente:";
             // 
             // dtGvAluguel
             // 
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(26)))));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.SpringGreen;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.Gray;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.SpringGreen;
-            this.dtGvAluguel.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(26)))));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.SpringGreen;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.SpringGreen;
+            this.dtGvAluguel.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dtGvAluguel.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(26)))));
             this.dtGvAluguel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(26)))));
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.SpringGreen;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.GrayText;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.SpringGreen;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtGvAluguel.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(26)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.SpringGreen;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.GrayText;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.SpringGreen;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtGvAluguel.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dtGvAluguel.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtGvAluguel.Location = new System.Drawing.Point(292, 337);
-            this.dtGvAluguel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtGvAluguel.Location = new System.Drawing.Point(219, 274);
             this.dtGvAluguel.Name = "dtGvAluguel";
             this.dtGvAluguel.RowHeadersWidth = 51;
-            this.dtGvAluguel.Size = new System.Drawing.Size(734, 185);
+            this.dtGvAluguel.Size = new System.Drawing.Size(550, 150);
             this.dtGvAluguel.TabIndex = 0;
             this.dtGvAluguel.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtGvAluguel_CellContentClick);
             this.dtGvAluguel.DoubleClick += new System.EventHandler(this.dtGvAluguel_DoubleClick);
@@ -130,11 +125,10 @@
             // 
             this.txtClienteId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(26)))));
             this.txtClienteId.ForeColor = System.Drawing.Color.SpringGreen;
-            this.txtClienteId.Location = new System.Drawing.Point(777, 132);
-            this.txtClienteId.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtClienteId.Location = new System.Drawing.Point(583, 107);
             this.txtClienteId.Name = "txtClienteId";
             this.txtClienteId.ReadOnly = true;
-            this.txtClienteId.Size = new System.Drawing.Size(132, 22);
+            this.txtClienteId.Size = new System.Drawing.Size(100, 20);
             this.txtClienteId.TabIndex = 10;
             this.txtClienteId.TextChanged += new System.EventHandler(this.txtClienteId_TextChanged);
             // 
@@ -143,10 +137,9 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.SpringGreen;
-            this.label1.Location = new System.Drawing.Point(233, 108);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(175, 78);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(102, 24);
+            this.label1.Size = new System.Drawing.Size(77, 18);
             this.label1.TabIndex = 12;
             this.label1.Text = "Aluguel ID:";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -155,21 +148,19 @@
             // 
             this.txtCarroId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(26)))));
             this.txtCarroId.ForeColor = System.Drawing.Color.SpringGreen;
-            this.txtCarroId.Location = new System.Drawing.Point(777, 171);
-            this.txtCarroId.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCarroId.Location = new System.Drawing.Point(583, 139);
             this.txtCarroId.Name = "txtCarroId";
             this.txtCarroId.ReadOnly = true;
-            this.txtCarroId.Size = new System.Drawing.Size(132, 22);
+            this.txtCarroId.Size = new System.Drawing.Size(100, 20);
             this.txtCarroId.TabIndex = 11;
             this.txtCarroId.TextChanged += new System.EventHandler(this.txtCarroId_TextChanged);
             // 
             // lblIdAluguel
             // 
             this.lblIdAluguel.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.lblIdAluguel.Location = new System.Drawing.Point(329, 96);
-            this.lblIdAluguel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblIdAluguel.Location = new System.Drawing.Point(247, 78);
             this.lblIdAluguel.Name = "lblIdAluguel";
-            this.lblIdAluguel.Size = new System.Drawing.Size(133, 28);
+            this.lblIdAluguel.Size = new System.Drawing.Size(100, 23);
             this.lblIdAluguel.TabIndex = 13;
             // 
             // btnAtualizar
@@ -179,10 +170,9 @@
             this.btnAtualizar.ForeColor = System.Drawing.Color.SpringGreen;
             this.btnAtualizar.Image = global::ALUGUEL_CARROS.Properties.Resources.arrow_repeat_242;
             this.btnAtualizar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnAtualizar.Location = new System.Drawing.Point(979, 122);
-            this.btnAtualizar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAtualizar.Location = new System.Drawing.Point(734, 99);
             this.btnAtualizar.Name = "btnAtualizar";
-            this.btnAtualizar.Size = new System.Drawing.Size(120, 65);
+            this.btnAtualizar.Size = new System.Drawing.Size(90, 53);
             this.btnAtualizar.TabIndex = 15;
             this.btnAtualizar.Text = "&Atualizar";
             this.btnAtualizar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -196,10 +186,9 @@
             this.btnSair.ForeColor = System.Drawing.Color.SpringGreen;
             this.btnSair.Image = global::ALUGUEL_CARROS.Properties.Resources.X;
             this.btnSair.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnSair.Location = new System.Drawing.Point(979, 242);
-            this.btnSair.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSair.Location = new System.Drawing.Point(734, 197);
             this.btnSair.Name = "btnSair";
-            this.btnSair.Size = new System.Drawing.Size(120, 64);
+            this.btnSair.Size = new System.Drawing.Size(90, 52);
             this.btnSair.TabIndex = 9;
             this.btnSair.Text = "Sair";
             this.btnSair.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -213,10 +202,9 @@
             this.btnCadastrarCarro.ForeColor = System.Drawing.Color.SpringGreen;
             this.btnCadastrarCarro.Image = global::ALUGUEL_CARROS.Properties.Resources.car_640;
             this.btnCadastrarCarro.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnCadastrarCarro.Location = new System.Drawing.Point(689, 241);
-            this.btnCadastrarCarro.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCadastrarCarro.Location = new System.Drawing.Point(517, 196);
             this.btnCadastrarCarro.Name = "btnCadastrarCarro";
-            this.btnCadastrarCarro.Size = new System.Drawing.Size(120, 63);
+            this.btnCadastrarCarro.Size = new System.Drawing.Size(90, 51);
             this.btnCadastrarCarro.TabIndex = 1;
             this.btnCadastrarCarro.Text = "Cadastrar Carro";
             this.btnCadastrarCarro.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -230,10 +218,9 @@
             this.btnCadastarCli.ForeColor = System.Drawing.Color.SpringGreen;
             this.btnCadastarCli.Image = global::ALUGUEL_CARROS.Properties.Resources.profile_1341;
             this.btnCadastarCli.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnCadastarCli.Location = new System.Drawing.Point(538, 242);
-            this.btnCadastarCli.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCadastarCli.Location = new System.Drawing.Point(404, 197);
             this.btnCadastarCli.Name = "btnCadastarCli";
-            this.btnCadastarCli.Size = new System.Drawing.Size(120, 63);
+            this.btnCadastarCli.Size = new System.Drawing.Size(90, 51);
             this.btnCadastarCli.TabIndex = 2;
             this.btnCadastarCli.Text = "Cadastrar Cliente";
             this.btnCadastarCli.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -248,10 +235,9 @@
             this.btnRemover.ForeColor = System.Drawing.Color.SpringGreen;
             this.btnRemover.Image = global::ALUGUEL_CARROS.Properties.Resources.delete;
             this.btnRemover.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnRemover.Location = new System.Drawing.Point(393, 241);
-            this.btnRemover.Margin = new System.Windows.Forms.Padding(4);
+            this.btnRemover.Location = new System.Drawing.Point(295, 196);
             this.btnRemover.Name = "btnRemover";
-            this.btnRemover.Size = new System.Drawing.Size(120, 63);
+            this.btnRemover.Size = new System.Drawing.Size(90, 51);
             this.btnRemover.TabIndex = 5;
             this.btnRemover.Text = "Remover";
             this.btnRemover.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -265,10 +251,9 @@
             this.btnGravar.ForeColor = System.Drawing.Color.SpringGreen;
             this.btnGravar.Image = global::ALUGUEL_CARROS.Properties.Resources.place;
             this.btnGravar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnGravar.Location = new System.Drawing.Point(831, 241);
-            this.btnGravar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnGravar.Location = new System.Drawing.Point(623, 196);
             this.btnGravar.Name = "btnGravar";
-            this.btnGravar.Size = new System.Drawing.Size(120, 64);
+            this.btnGravar.Size = new System.Drawing.Size(90, 52);
             this.btnGravar.TabIndex = 14;
             this.btnGravar.Text = "Gravar";
             this.btnGravar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -283,10 +268,9 @@
             this.btnAdd.ForeColor = System.Drawing.Color.SpringGreen;
             this.btnAdd.Image = global::ALUGUEL_CARROS.Properties.Resources.profile_plus_1354;
             this.btnAdd.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnAdd.Location = new System.Drawing.Point(247, 241);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAdd.Location = new System.Drawing.Point(185, 196);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(120, 63);
+            this.btnAdd.Size = new System.Drawing.Size(90, 51);
             this.btnAdd.TabIndex = 6;
             this.btnAdd.Text = "Add";
             this.btnAdd.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -295,10 +279,10 @@
             // 
             // frmPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(26)))));
-            this.ClientSize = new System.Drawing.Size(1343, 711);
+            this.ClientSize = new System.Drawing.Size(1007, 578);
             this.Controls.Add(this.btnAtualizar);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.lblIdAluguel);
@@ -316,7 +300,6 @@
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmPrincipal";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
