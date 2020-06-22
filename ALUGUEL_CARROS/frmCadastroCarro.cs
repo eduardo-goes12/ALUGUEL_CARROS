@@ -254,6 +254,7 @@ namespace ALUGUEL_CARROS
         private void button1_Click(object sender, EventArgs e)
         {
             RelatoriosGerais.relProduto();
+            MessageBox.Show("Relatorio gerado");
         }
     }
 }

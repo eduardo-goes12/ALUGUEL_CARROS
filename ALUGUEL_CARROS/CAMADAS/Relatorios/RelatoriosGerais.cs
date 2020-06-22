@@ -96,11 +96,12 @@ namespace ALUGUEL_CARROS.CAMADAS.Relatorios
                 sw.WriteLine("</h2>");
                 sw.WriteLine("</html>");
             }
+            /*
             System.Diagnostics.Process.Start(arquivo);
 
             var htmlToPdf = new NReco.PdfGenerator.HtmlToPdfConverter();
             htmlToPdf.CustomWkHtmlArgs = "--dpi 300";
-            htmlToPdf.GeneratePdfFromFile(arquivo, null, arquivoPDF);
+            htmlToPdf.GeneratePdfFromFile(arquivo, null, arquivoPDF); */
         }
 
 
@@ -108,5 +109,5 @@ namespace ALUGUEL_CARROS.CAMADAS.Relatorios
 
     }
 }
-    }
-}
+
+
