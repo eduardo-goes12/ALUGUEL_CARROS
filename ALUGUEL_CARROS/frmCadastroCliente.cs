@@ -146,6 +146,7 @@ namespace ALUGUEL_CARROS
                 cliente.nome = txtNome.Text;
                 cliente.cpf = txtCpf.Text;
                 cliente.sexo = txtSexo.Text;
+                
                 if (lblId.Text == "-1")
                 {
                     bllCliente.Insert(cliente);
