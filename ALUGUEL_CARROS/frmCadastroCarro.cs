@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ALUGUEL_CARROS.CAMADAS.Relatorios;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -248,6 +249,12 @@ namespace ALUGUEL_CARROS
                 }
             dtGrvCarro.DataSource = "";
             dtGrvCarro.DataSource = lstCarros;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            RelatoriosGerais.relProduto();
+            MessageBox.Show("Relatorio gerado");
         }
     }
 }

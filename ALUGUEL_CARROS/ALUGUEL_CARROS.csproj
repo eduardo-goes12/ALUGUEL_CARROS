@@ -56,6 +56,8 @@
     <Compile Include="CAMADAS\MODEL\Aluguel.cs" />
     <Compile Include="CAMADAS\MODEL\Carros.cs" />
     <Compile Include="CAMADAS\MODEL\Clientes.cs" />
+    <Compile Include="CAMADAS\Relatorios\Funcoes.cs" />
+    <Compile Include="CAMADAS\Relatorios\RelatoriosGerais.cs" />
     <Compile Include="frmCadastroCliente.cs">
       <SubType>Form</SubType>
     </Compile>
