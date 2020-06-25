@@ -110,6 +110,7 @@ namespace ALUGUEL_CARROS
 
         private void btnGravar_Click(object sender, EventArgs e)
         {
+            
             CAMADAS.MODEL.Aluguel aluguel = new CAMADAS.MODEL.Aluguel();
             CAMADAS.MODEL.Carros carro = new CAMADAS.MODEL.Carros();
 
@@ -126,27 +127,26 @@ namespace ALUGUEL_CARROS
             CAMADAS.MODEL.Aluguel aluguel1 = bllAlu.BuscaCliente(idC);
             CAMADAS.MODEL.Aluguel aluguel2 = bllAlu.BuscaCarro(idCr);
 
-
-            if (lblIdAluguel.Text == "-1")
-            {
-                if (aluguel1.clienteID == idC)
+            
+                if (lblIdAluguel.Text == "-1")
                 {
-                    MessageBox.Show("Cliente ja possui aluguel");
-                }
+                    if (aluguel1.clienteID == idC)
+                    {
+                        MessageBox.Show("Cliente ja possui aluguel");
+                    }
                     else if (aluguel2.carroID == idCr)
                     {
-                    MessageBox.Show("Carro não esta Disponivel");
+                        MessageBox.Show("Carro não esta Disponivel");
                     }
                     else
                     {
-                    bllAlu.Insert(aluguel);
+                        bllAlu.Insert(aluguel);
                     }
-                 
-            }
-            else
-            {
-                bllAlu.Update(aluguel); 
-            }
+
+                }
+            
+            
+            
             dtGvAluguel.DataSource = "";
             dtGvAluguel.DataSource = bllAlu.Select();            
 
