@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dtGrvClientes = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -43,12 +43,12 @@
             this.lblId = new System.Windows.Forms.Label();
             this.gpbPesquisa = new System.Windows.Forms.GroupBox();
             this.rdbCPF = new System.Windows.Forms.RadioButton();
+            this.btnFiltro = new System.Windows.Forms.Button();
             this.txtFiltro = new System.Windows.Forms.TextBox();
             this.lblFiltrar = new System.Windows.Forms.Label();
             this.rdbTodos = new System.Windows.Forms.RadioButton();
             this.rdbId = new System.Windows.Forms.RadioButton();
             this.rdbNome = new System.Windows.Forms.RadioButton();
-            this.btnFiltro = new System.Windows.Forms.Button();
             this.btnPesquisar = new System.Windows.Forms.Button();
             this.btnGravar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
@@ -56,47 +56,48 @@
             this.btnRemover = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtGrvClientes)).BeginInit();
             this.gpbPesquisa.SuspendLayout();
             this.SuspendLayout();
             // 
             // dtGrvClientes
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(26)))));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.SpringGreen;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Gray;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.SpringGreen;
-            this.dtGrvClientes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(26)))));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.SpringGreen;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.SpringGreen;
+            this.dtGrvClientes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
             this.dtGrvClientes.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(26)))));
             this.dtGrvClientes.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(26)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.SpringGreen;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.GrayText;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.SpringGreen;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtGrvClientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(26)))));
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.SpringGreen;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.GrayText;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.SpringGreen;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtGrvClientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.dtGrvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(26)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.SpringGreen;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.SpringGreen;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtGrvClientes.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(26)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.SpringGreen;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.SpringGreen;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtGrvClientes.DefaultCellStyle = dataGridViewCellStyle11;
             this.dtGrvClientes.Location = new System.Drawing.Point(321, 510);
-            this.dtGrvClientes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtGrvClientes.Margin = new System.Windows.Forms.Padding(4);
             this.dtGrvClientes.Name = "dtGrvClientes";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(26)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.SpringGreen;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.GrayText;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.SpringGreen;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtGrvClientes.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(26)))));
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.SpringGreen;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.GrayText;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.SpringGreen;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtGrvClientes.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.dtGrvClientes.RowHeadersWidth = 51;
             this.dtGrvClientes.Size = new System.Drawing.Size(746, 185);
             this.dtGrvClientes.TabIndex = 0;
@@ -160,7 +161,7 @@
             this.txtNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNome.ForeColor = System.Drawing.Color.SpringGreen;
             this.txtNome.Location = new System.Drawing.Point(249, 123);
-            this.txtNome.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNome.Margin = new System.Windows.Forms.Padding(4);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(316, 30);
             this.txtNome.TabIndex = 6;
@@ -171,7 +172,7 @@
             this.txtCpf.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCpf.ForeColor = System.Drawing.Color.SpringGreen;
             this.txtCpf.Location = new System.Drawing.Point(249, 176);
-            this.txtCpf.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCpf.Margin = new System.Windows.Forms.Padding(4);
             this.txtCpf.Name = "txtCpf";
             this.txtCpf.Size = new System.Drawing.Size(316, 30);
             this.txtCpf.TabIndex = 7;
@@ -183,7 +184,7 @@
             this.txtSexo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSexo.ForeColor = System.Drawing.Color.SpringGreen;
             this.txtSexo.Location = new System.Drawing.Point(249, 229);
-            this.txtSexo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSexo.Margin = new System.Windows.Forms.Padding(4);
             this.txtSexo.Name = "txtSexo";
             this.txtSexo.Size = new System.Drawing.Size(316, 30);
             this.txtSexo.TabIndex = 8;
@@ -208,9 +209,9 @@
             this.gpbPesquisa.Controls.Add(this.rdbNome);
             this.gpbPesquisa.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.gpbPesquisa.Location = new System.Drawing.Point(717, 49);
-            this.gpbPesquisa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gpbPesquisa.Margin = new System.Windows.Forms.Padding(4);
             this.gpbPesquisa.Name = "gpbPesquisa";
-            this.gpbPesquisa.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gpbPesquisa.Padding = new System.Windows.Forms.Padding(4);
             this.gpbPesquisa.Size = new System.Drawing.Size(484, 320);
             this.gpbPesquisa.TabIndex = 22;
             this.gpbPesquisa.TabStop = false;
@@ -223,7 +224,7 @@
             this.rdbCPF.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdbCPF.ForeColor = System.Drawing.Color.SpringGreen;
             this.rdbCPF.Location = new System.Drawing.Point(28, 127);
-            this.rdbCPF.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rdbCPF.Margin = new System.Windows.Forms.Padding(4);
             this.rdbCPF.Name = "rdbCPF";
             this.rdbCPF.Size = new System.Drawing.Size(68, 28);
             this.rdbCPF.TabIndex = 6;
@@ -232,12 +233,28 @@
             this.rdbCPF.UseVisualStyleBackColor = true;
             this.rdbCPF.CheckedChanged += new System.EventHandler(this.rdbCPF_CheckedChanged);
             // 
+            // btnFiltro
+            // 
+            this.btnFiltro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFiltro.ForeColor = System.Drawing.Color.SpringGreen;
+            this.btnFiltro.Image = global::ALUGUEL_CARROS.Properties.Resources.filtro;
+            this.btnFiltro.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFiltro.Location = new System.Drawing.Point(364, 272);
+            this.btnFiltro.Margin = new System.Windows.Forms.Padding(4);
+            this.btnFiltro.Name = "btnFiltro";
+            this.btnFiltro.Size = new System.Drawing.Size(100, 28);
+            this.btnFiltro.TabIndex = 5;
+            this.btnFiltro.Text = "&Filtrar";
+            this.btnFiltro.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnFiltro.UseVisualStyleBackColor = true;
+            this.btnFiltro.Click += new System.EventHandler(this.btnFiltro_Click);
+            // 
             // txtFiltro
             // 
             this.txtFiltro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(26)))));
             this.txtFiltro.ForeColor = System.Drawing.Color.SpringGreen;
             this.txtFiltro.Location = new System.Drawing.Point(28, 214);
-            this.txtFiltro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtFiltro.Margin = new System.Windows.Forms.Padding(4);
             this.txtFiltro.Name = "txtFiltro";
             this.txtFiltro.Size = new System.Drawing.Size(361, 22);
             this.txtFiltro.TabIndex = 4;
@@ -259,7 +276,7 @@
             this.rdbTodos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdbTodos.ForeColor = System.Drawing.Color.SpringGreen;
             this.rdbTodos.Location = new System.Drawing.Point(26, 28);
-            this.rdbTodos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rdbTodos.Margin = new System.Windows.Forms.Padding(4);
             this.rdbTodos.Name = "rdbTodos";
             this.rdbTodos.Size = new System.Drawing.Size(85, 28);
             this.rdbTodos.TabIndex = 2;
@@ -274,7 +291,7 @@
             this.rdbId.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdbId.ForeColor = System.Drawing.Color.SpringGreen;
             this.rdbId.Location = new System.Drawing.Point(27, 59);
-            this.rdbId.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rdbId.Margin = new System.Windows.Forms.Padding(4);
             this.rdbId.Name = "rdbId";
             this.rdbId.Size = new System.Drawing.Size(46, 28);
             this.rdbId.TabIndex = 1;
@@ -288,7 +305,7 @@
             this.rdbNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdbNome.ForeColor = System.Drawing.Color.SpringGreen;
             this.rdbNome.Location = new System.Drawing.Point(28, 91);
-            this.rdbNome.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rdbNome.Margin = new System.Windows.Forms.Padding(4);
             this.rdbNome.Name = "rdbNome";
             this.rdbNome.Size = new System.Drawing.Size(83, 28);
             this.rdbNome.TabIndex = 0;
@@ -296,28 +313,12 @@
             this.rdbNome.UseVisualStyleBackColor = true;
             this.rdbNome.CheckedChanged += new System.EventHandler(this.rdbNome_CheckedChanged);
             // 
-            // btnFiltro
-            // 
-            this.btnFiltro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFiltro.ForeColor = System.Drawing.Color.SpringGreen;
-            this.btnFiltro.Image = global::ALUGUEL_CARROS.Properties.Resources.filtro;
-            this.btnFiltro.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFiltro.Location = new System.Drawing.Point(364, 272);
-            this.btnFiltro.Margin = new System.Windows.Forms.Padding(4);
-            this.btnFiltro.Name = "btnFiltro";
-            this.btnFiltro.Size = new System.Drawing.Size(100, 28);
-            this.btnFiltro.TabIndex = 5;
-            this.btnFiltro.Text = "&Filtrar";
-            this.btnFiltro.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnFiltro.UseVisualStyleBackColor = true;
-            this.btnFiltro.Click += new System.EventHandler(this.btnFiltro_Click);
-            // 
             // btnPesquisar
             // 
             this.btnPesquisar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPesquisar.Image = global::ALUGUEL_CARROS.Properties.Resources.pesquisa;
             this.btnPesquisar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnPesquisar.Location = new System.Drawing.Point(987, 417);
+            this.btnPesquisar.Location = new System.Drawing.Point(1034, 420);
             this.btnPesquisar.Margin = new System.Windows.Forms.Padding(4);
             this.btnPesquisar.Name = "btnPesquisar";
             this.btnPesquisar.Size = new System.Drawing.Size(167, 58);
@@ -335,7 +336,7 @@
             this.btnGravar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGravar.Image = global::ALUGUEL_CARROS.Properties.Resources.place;
             this.btnGravar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnGravar.Location = new System.Drawing.Point(693, 417);
+            this.btnGravar.Location = new System.Drawing.Point(642, 424);
             this.btnGravar.Margin = new System.Windows.Forms.Padding(4);
             this.btnGravar.Name = "btnGravar";
             this.btnGravar.Size = new System.Drawing.Size(104, 55);
@@ -353,7 +354,7 @@
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.Image = global::ALUGUEL_CARROS.Properties.Resources.tab;
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnCancelar.Location = new System.Drawing.Point(553, 417);
+            this.btnCancelar.Location = new System.Drawing.Point(518, 422);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(104, 57);
@@ -371,7 +372,7 @@
             this.btnSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSair.Image = global::ALUGUEL_CARROS.Properties.Resources.X;
             this.btnSair.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnSair.Location = new System.Drawing.Point(827, 416);
+            this.btnSair.Location = new System.Drawing.Point(767, 424);
             this.btnSair.Margin = new System.Windows.Forms.Padding(4);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(104, 57);
@@ -389,7 +390,7 @@
             this.btnRemover.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRemover.Image = global::ALUGUEL_CARROS.Properties.Resources.delete;
             this.btnRemover.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnRemover.Location = new System.Drawing.Point(420, 420);
+            this.btnRemover.Location = new System.Drawing.Point(392, 422);
             this.btnRemover.Margin = new System.Windows.Forms.Padding(4);
             this.btnRemover.Name = "btnRemover";
             this.btnRemover.Size = new System.Drawing.Size(104, 57);
@@ -407,7 +408,7 @@
             this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditar.Image = global::ALUGUEL_CARROS.Properties.Resources.edit;
             this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnEditar.Location = new System.Drawing.Point(281, 420);
+            this.btnEditar.Location = new System.Drawing.Point(262, 422);
             this.btnEditar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(104, 57);
@@ -425,7 +426,7 @@
             this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.Image = global::ALUGUEL_CARROS.Properties.Resources.profile_plus_1354;
             this.btnAdd.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnAdd.Location = new System.Drawing.Point(144, 420);
+            this.btnAdd.Location = new System.Drawing.Point(136, 420);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(4);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(104, 57);
@@ -435,6 +436,20 @@
             this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
+            // button1
+            // 
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Image = global::ALUGUEL_CARROS.Properties.Resources.tab;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button1.Location = new System.Drawing.Point(891, 424);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(104, 57);
+            this.button1.TabIndex = 23;
+            this.button1.Text = "Relatorio";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // frmCadastroCli
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -442,6 +457,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(26)))));
             this.ClientSize = new System.Drawing.Size(1440, 737);
             this.ControlBox = false;
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.gpbPesquisa);
             this.Controls.Add(this.btnPesquisar);
             this.Controls.Add(this.btnGravar);
@@ -462,7 +478,7 @@
             this.ForeColor = System.Drawing.Color.SpringGreen;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.KeyPreview = true;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmCadastroCli";
@@ -503,6 +519,7 @@
         private System.Windows.Forms.RadioButton rdbId;
         private System.Windows.Forms.RadioButton rdbNome;
         private System.Windows.Forms.RadioButton rdbCPF;
+        private System.Windows.Forms.Button button1;
     }
 }
 

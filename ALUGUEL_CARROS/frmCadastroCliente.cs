@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ALUGUEL_CARROS.CAMADAS.Relatorios;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -256,6 +257,14 @@ namespace ALUGUEL_CARROS
             lblFiltrar.Visible = true;
             txtFiltro.Visible = true;
             txtFiltro.Focus();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+                RelatorioClientes.relClientes();
+                MessageBox.Show("Relatorio gerado");
+           
         }
     }
 }
